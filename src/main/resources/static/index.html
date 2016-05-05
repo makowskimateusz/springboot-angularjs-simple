@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app>
+<head>
+    <title>Meeting</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="get.js"></script>
+</head>
+
+<body>
+<div ng-controller="meeting">
+    <p>The ID is {{m.id}}</p>
+    <p>The Description is {{m.description}}</p>
+    <p>The Date is {{m.date}}</p>
+
+</div>
+
+<div ng-controller="test"></div>
+
+<div ng-controller="meetings">
+    <table>
+        <tr>
+            <th ng-repeat="(key, val) in meetings[0]">{{key}}</th>
+        </tr>
+        <tr ng-repeat="met in meetings">
+            <td ng-repeat="(key, val) in met">{{val}}</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
