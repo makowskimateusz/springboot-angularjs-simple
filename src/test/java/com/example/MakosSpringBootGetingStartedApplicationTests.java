@@ -12,6 +12,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
+import static org.junit.Assert.assertEquals;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -50,5 +51,13 @@ public class MakosSpringBootGetingStartedApplicationTests {
                 .andExpect(jsonPath("$.description", Matchers.is("jakieś tam spotkanie")));
 
     }
+
+    @Test
+    public void testSum(){
+
+//        assertEquals(8, Calc.sum(3, 5));
+
+    }
+
 
 }

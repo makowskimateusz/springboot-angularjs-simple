@@ -9,14 +9,11 @@ import java.util.List;
 @RestController
 public class MeetingController {
 
-    @RequestMapping(value = "/meeting", method = RequestMethod.GET)
-    public @ResponseBody Meeting addMeeting(){
+    @RequestMapping(value = "/meeting", method = RequestMethod.POST)
+    public @ResponseBody Meeting addMeeting(@RequestBody Meeting meeting){
 
-
-        Meeting meeting = new Meeting("jakieś tam spotkanie", "dzisiaj");
-
+        System.out.println(meeting.getDate() + ", " + meeting.getDescription());
         return meeting;
-
 
     }
 

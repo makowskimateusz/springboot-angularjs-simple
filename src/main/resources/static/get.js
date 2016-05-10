@@ -17,3 +17,26 @@ function meetings($scope, $http) {
     })
 
 }
+
+function testSendingJSON($scope, $http) {
+
+
+    //simple json data created
+    var dataTosend = {
+
+        description : "testowy description z jsona",
+        date : "testowa data z jsona"
+
+    }
+
+
+        $http.post('/meeting', dataTosend)
+            .success(function (data) {
+
+                $scope.message = data;
+
+            });
+
+
+
+}
